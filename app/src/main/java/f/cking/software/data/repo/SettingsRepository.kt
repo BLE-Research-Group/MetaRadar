@@ -139,6 +139,14 @@ class SettingsRepository(
         sharedPreferences.edit { putBoolean(KEY_WAKE_UP_SCREEN_WHILE_SCANNING, value) }
     }
 
+    fun setAppLanguage(languageTag: String) {
+        sharedPreferences.edit { putString(KEY_APP_LANGUAGE, languageTag) }
+    }
+
+    fun getAppLanguage(): String {
+        return sharedPreferences.getString(KEY_APP_LANGUAGE, DEFAULT_APP_LANGUAGE) ?: DEFAULT_APP_LANGUAGE
+    }
+
     companion object {
         private const val KEY_GARBAGING_TIME = "key_garbaging_time"
         private const val KEY_USE_GPS_ONLY = "key_use_gps_location_only"
@@ -154,6 +162,9 @@ class SettingsRepository(
         private const val KEY_DISCLAIMER_WAS_ACCEPTED = "key_disclaimer_was_accepted"
         private const val KEY_WHAT_IS_THIS_APP_FOR_WAS_SHOWN = "what_is_this_app_for_was_shown"
         private const val KEY_WAKE_UP_SCREEN_WHILE_SCANNING = "key_wake_up_screen_while_scanning"
+        private const val KEY_APP_LANGUAGE = "key_app_language"
+
+        const val DEFAULT_APP_LANGUAGE = "system"
 
         const val NO_APP_LAUNCH_TIME = -1L
         const val NO_ENJOY_THE_APP_STARTING_POINT = -1L

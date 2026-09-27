@@ -4,9 +4,11 @@ import android.app.Application
 import android.net.Uri
 import android.provider.Settings
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.core.os.LocaleListCompat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import f.cking.software.BuildConfig
@@ -57,6 +59,7 @@ class SettingsViewModel(
     var wakeUpWhileScanning: Boolean by mutableStateOf(settingsRepository.getWakeUpScreenWhileScanning())
     var silentModeEnabled: Boolean by mutableStateOf(settingsRepository.getSilentMode())
     var deepAnalysisEnabled: Boolean by mutableStateOf(settingsRepository.getEnableDeepAnalysis())
+    var appLanguage: String by mutableStateOf(settingsRepository.getAppLanguage())
 
     val databaseInfo by getDatabaseInfoInteractor.execute().collectAsState(viewModelScope, null)
 
@@ -160,6 +163,17 @@ class SettingsViewModel(
 
     fun changeSilentMode() {
         settingsRepository.setSilentMode(!settingsRepository.getSilentMode())
+    }
+
+    fun onLanguageSelected(languageTag: String) {
+        settingsRepository.setAppLanguage(languageTag)
+        appLanguage = languageTag
+        val localeList = if (languageTag == SettingsRepository.DEFAULT_APP_LANGUAGE) {
+            LocaleListCompat.getEmptyLocaleList()
+        } else {
+            LocaleListCompat.forLanguageTags(languageTag)
+        }
+        AppCompatDelegate.setApplicationLocales(localeList)
     }
 
     fun onReportIssueClick() {

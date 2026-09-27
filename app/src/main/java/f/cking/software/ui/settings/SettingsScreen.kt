@@ -3,8 +3,10 @@ package f.cking.software.ui.settings
 import android.text.format.Formatter
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -32,6 +34,7 @@ import androidx.compose.ui.unit.sp
 import com.vanpra.composematerialdialogs.rememberMaterialDialogState
 import f.cking.software.BuildConfig
 import f.cking.software.R
+import f.cking.software.data.repo.SettingsRepository
 import f.cking.software.dateTimeStringFormat
 import f.cking.software.utils.graphic.BottomNavigationSpacer
 import f.cking.software.utils.graphic.FABSpacer
@@ -330,6 +333,82 @@ object SettingsScreen {
                     viewModel.toggleWakeUpOnScreen()
                 }
             )
+            LanguageSelector(viewModel = viewModel)
+        }
+    }
+
+    @Composable
+    private fun LanguageSelector(viewModel: SettingsViewModel) {
+        val dialogState = rememberMaterialDialogState()
+        val currentLanguageName = when (viewModel.appLanguage) {
+            "en" -> stringResource(R.string.language_english)
+            "zh-rCN" -> stringResource(R.string.language_chinese)
+            "hu" -> stringResource(R.string.language_hungarian)
+            "ru" -> stringResource(R.string.language_russian)
+            else -> stringResource(R.string.language_system)
+        }
+
+        ThemedDialog(
+            dialogState = dialogState,
+            buttons = {
+                negativeButton(
+                    text = stringResource(R.string.cancel),
+                    textStyle = TextStyle(color = MaterialTheme.colorScheme.onSurface)
+                ) { dialogState.hide() }
+            },
+        ) {
+            Column(Modifier.padding(16.dp)) {
+                Text(text = stringResource(R.string.language_dialog_title), fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                Spacer(modifier = Modifier.height(8.dp))
+                LanguageOption(textRes = R.string.language_system) {
+                    viewModel.onLanguageSelected(SettingsRepository.DEFAULT_APP_LANGUAGE)
+                    dialogState.hide()
+                }
+                LanguageOption(textRes = R.string.language_english) {
+                    viewModel.onLanguageSelected("en")
+                    dialogState.hide()
+                }
+                LanguageOption(textRes = R.string.language_chinese) {
+                    viewModel.onLanguageSelected("zh-rCN")
+                    dialogState.hide()
+                }
+                LanguageOption(textRes = R.string.language_hungarian) {
+                    viewModel.onLanguageSelected("hu")
+                    dialogState.hide()
+                }
+                LanguageOption(textRes = R.string.language_russian) {
+                    viewModel.onLanguageSelected("ru")
+                    dialogState.hide()
+                }
+            }
+        }
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable { dialogState.show() }
+                .padding(horizontal = 16.dp, vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Column(
+                modifier = Modifier.weight(1f),
+            ) {
+                Text(text = stringResource(R.string.language))
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(text = currentLanguageName, fontWeight = FontWeight.Light, fontSize = 12.sp)
+            }
+        }
+    }
+
+    @Composable
+    private fun LanguageOption(textRes: Int, onClick: () -> Unit) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable { onClick.invoke() }
+                .padding(vertical = 8.dp)
+        ) {
+            Text(text = stringResource(textRes))
         }
     }
 

@@ -169,4 +169,11 @@
     <string name="turn_on">Bekapcsolás</string>
     <string name="unknown_capital_case">ISMERETLEN</string>
     <string name="lifetime_data_last_update">örök: %1$s | legutóbbi frissítés: %2$s ideje</string>
+    <string name="language">Nyelv</string>
+    <string name="language_dialog_title">Alkalmazás nyelve</string>
+    <string name="language_system">Rendszer szerint</string>
+    <string name="language_english">English</string>
+    <string name="language_chinese">中文</string>
+    <string name="language_hungarian">Magyar</string>
+    <string name="language_russian">Русский</string>
 </resources>

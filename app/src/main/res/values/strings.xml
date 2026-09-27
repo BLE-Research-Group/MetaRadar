@@ -105,6 +105,13 @@
     <string name="database_devices_count">Devices records: %s</string>
     <string name="database_locations_count">Location records: %s</string>
     <string name="app_settings_title">App settings</string>
+    <string name="language">Language</string>
+    <string name="language_dialog_title">App language</string>
+    <string name="language_system">System default</string>
+    <string name="language_english">English</string>
+    <string name="language_chinese">中文</string>
+    <string name="language_hungarian">Magyar</string>
+    <string name="language_russian">Русский</string>
     <string name="silent_mode_is_off_toast">Offline mode is turned off. You can change it in the settings.</string>
     <string name="enable_deep_analysis">Deep analysis (Experimental)</string>
     <string name="enable_deep_analysis_description">If Deep Analysis is enabled, the app will request more information from all found devices. It will provide more data for each scan, but will also increase scan time and power consumption and may disclose your presence.</string>

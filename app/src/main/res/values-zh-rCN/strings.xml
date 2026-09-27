@@ -1,0 +1,394 @@
+<resources>
+    <string name="app_name" translatable="false">BLE Radar</string>
+
+    <!-- Common -->
+    <string name="search">搜索</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+    <string name="back">返回</string>
+    <string name="save">保存</string>
+    <string name="close">关闭</string>
+    <string name="understood">知道了</string>
+    <string name="delete">删除</string>
+    <string name="select">选择</string>
+    <string name="clear">清除</string>
+    <string name="fetch">获取</string>
+    <string name="analyse">分析</string>
+    <string name="decline">拒绝</string>
+    <string name="ok">确定</string>
+    <string name="turn_on">开启</string>
+    <string name="report">报告</string>
+    <string name="accept">接受</string>
+    <string name="shaders_test" translatable="false">Shaders test</string>
+    <string name="preparing_database">正在优化数据库，可能需要一分钟…</string>
+
+    <plurals name="day">
+        <item quantity="zero">%d 天</item>
+        <item quantity="one">%d 天</item>
+        <item quantity="two">%d 天</item>
+        <item quantity="few">%d 天</item>
+        <item quantity="many">%d 天</item>
+        <item quantity="other">%d 天</item>
+    </plurals>
+
+    <plurals name="hour">
+        <item quantity="zero">%d 小时</item>
+        <item quantity="one">%d 小时</item>
+        <item quantity="two">%d 小时</item>
+        <item quantity="few">%d 小时</item>
+        <item quantity="many">%d 小时</item>
+        <item quantity="other">%d 小时</item>
+    </plurals>
+
+    <plurals name="min">
+        <item quantity="zero">%d 分钟</item>
+        <item quantity="one">%d 分钟</item>
+        <item quantity="two">%d 分钟</item>
+        <item quantity="few">%d 分钟</item>
+        <item quantity="many">%d 分钟</item>
+        <item quantity="other">%d 分钟</item>
+    </plurals>
+
+    <plurals name="sec">
+        <item quantity="zero">%d 秒</item>
+        <item quantity="one">%d 秒</item>
+        <item quantity="two">%d 秒</item>
+        <item quantity="few">%d 秒</item>
+        <item quantity="many">%d 秒</item>
+        <item quantity="other">%d 秒</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="no_location_data_yet">暂无位置数据</string>
+    <string name="location_fetches_only_if_service_is_turned_on">仅在扫描器启动时获取位置</string>
+    <string name="last_location_update_time">上次位置更新时间：%s</string>
+    <string name="lat_template">纬度：%s</string>
+    <string name="lng_template">经度：%s</string>
+    <string name="clear_garbage">清理垃圾数据</string>
+    <string name="restore_data_from_file_title">从文件恢复数据库？</string>
+    <string name="restore_data_from_file_subtitle">当前数据库将被覆盖，数据将会丢失</string>
+    <string name="button_project_purpose">项目用途</string>
+    <string name="settings_restore_database">恢复数据库</string>
+    <string name="backup_database_title">将数据库保存到设备存储？</string>
+    <string name="backup_database_subtitle">数据库包含您的位置历史记录。请妥善保管，这是您的敏感数据</string>
+    <string name="settings_backup_database">备份数据库</string>
+    <string name="settings_clear_all_location_history">清除位置历史记录</string>
+    <string name="settings_use_gps_title">仅使用 GPS 定位</string>
+    <string name="settings_use_gps_subtitle">融合位置提供器使用推测性地理定位，可在 GPS 信号较差的区域提升性能，但会降低定位精度。禁用融合定位可提高数据准确性，但会对功耗产生负面影响。</string>
+    <string name="settings_location_history_was_removed">位置历史记录已清除</string>
+    <string name="backup_has_failed">备份失败。请查看日志中的报告</string>
+    <string name="directory_was_not_selected">未选择目录</string>
+    <string name="file_was_not_selected">未选择文件</string>
+    <string name="cannot_restore_database">无法恢复数据库。请查看日志中的报告</string>
+    <string name="database_was_restored">数据库已从备份恢复</string>
+    <string name="backup_has_succeeded">备份成功</string>
+    <string name="garbage_has_cleared">已清除 %s 个垃圾设备</string>
+    <string name="clear_all_location_history_dialog_title">确定清除所有位置历史记录？</string>
+    <string name="launch_on_system_startup_title">开机自启动</string>
+    <string name="report_issue_title">发现问题或有功能建议？</string>
+    <string name="app_info_title">关于</string>
+    <string name="app_info_version">版本：%1$s（%2$s）</string>
+    <string name="app_info_build_type_release">构建类型：正式版</string>
+    <string name="app_info_build_type_debug">构建类型：调试版</string>
+    <string name="app_info_distribution">发行渠道：%s</string>
+    <string name="modify_settings_toast">需要此权限以便在后台扫描时降低屏幕亮度，从而节省电量</string>
+    <string name="settings_keep_screen_on_while_scanning_title">BLE 扫描时保持屏幕常亮</string>
+    <string name="settings_keep_screen_on_while_scanning_description">启用此功能后，应用在扫描 BLE 设备时会暂时保持屏幕唤醒。在 Android 上，屏幕关闭时 BLE 扫描会受到限制或暂停，因此开启此功能可确保准确的设备检测。关闭此功能可节省电量，但屏幕关闭时扫描可能不够准确。</string>
+    <string name="project_github_title">%s 是一个开源项目。您可以在 GitHub 上找到源代码。欢迎提问、贡献代码并给仓库点 Star！</string>
+    <string name="open_github">前往 GitHub</string>
+    <string name="secret_cat">一张神秘猫咪照片</string>
+    <string name="silent_mode_title">离线模式</string>
+    <string name="silent_mode_subtitle">关闭应用中的所有网络通信。有助于节省流量。</string>
+    <string name="database_actions">数据库操作</string>
+    <string name="database_information">数据库信息</string>
+    <string name="database_size">大小：%s</string>
+    <string name="database_devices_count">设备记录：%s</string>
+    <string name="database_locations_count">位置记录：%s</string>
+    <string name="app_settings_title">应用设置</string>
+    <string name="language">语言</string>
+    <string name="language_dialog_title">应用语言</string>
+    <string name="language_system">跟随系统</string>
+    <string name="language_english">English</string>
+    <string name="language_chinese">中文</string>
+    <string name="language_hungarian">Magyar</string>
+    <string name="language_russian">Русский</string>
+    <string name="silent_mode_is_off_toast">离线模式已关闭。您可以在设置中更改。</string>
+    <string name="enable_deep_analysis">深度分析（实验性）</string>
+    <string name="enable_deep_analysis_description">如果启用深度分析，应用将向所有发现的设备请求更多信息。每次扫描将提供更多数据，但也会增加扫描时间和功耗，并可能暴露您的存在。</string>
+    <string name="deep_analysis_warning_title">启用深度分析？（实验性）</string>
+    <string name="deep_analysis_warning_text">深度分析不仅扫描 BLE 设备，还会主动向其可访问的 GATT 服务请求数据。\n\n某些设备可能需要身份验证或加密才能访问特定服务。在这种情况下，可能会触发配对请求。\n\n此模式也可能使您的设备对附近设备更加可见。\n\n仅在您了解其工作原理并接受这些副作用时才启用此功能。</string>
+    <string name="deep_analysis_agreement_text">我知道自己在做什么</string>
+    <string name="deep_analysis_decline">取消</string>
+    <string name="deep_analysis_enable">启用</string>
+
+    <!-- Select manufacturer -->
+    <string name="select_manufacturer">搜索制造商</string>
+
+    <!-- Select location -->
+    <string name="select_location">选择位置</string>
+    <string name="select_location_radius">半径：%.1f 米</string>
+
+    <!-- Select filter -->
+    <string name="select_filter">选择筛选条件</string>
+    <string name="filter_by_name">按名称</string>
+    <string name="filter_by_name_description">当设备名称匹配指定的子字符串或正则表达式时触发</string>
+    <string name="filter_by_address">按地址</string>
+    <string name="filter_by_address_disclaimer">设备地址</string>
+    <string name="filter_by_address_description">当设备地址匹配时触发</string>
+    <string name="filter_by_first_detection_period">按首次检测时间</string>
+    <string name="filter_by_first_detection_period_description">如果设备在选定时间段内首次被检测到则触发</string>
+    <string name="filter_by_last_detection_period">按末次检测时间</string>
+    <string name="filter_by_last_detection_period_description">如果设备在选定时间段内末次被检测到则触发</string>
+    <string name="filter_by_is_favorite">按收藏状态</string>
+    <string name="filter_by_is_favorite_description">如果设备被标记为收藏则触发</string>
+    <string name="filter_by_is_paired">按配对状态</string>
+    <string name="filter_by_is_paired_description">如果设备已与您的设备配对则触发</string>
+    <string name="filter_by_manufacturer">按制造商</string>
+    <string name="filter_by_manufacturer_description">当设备芯片制造商匹配时触发</string>
+    <string name="filter_by_min_lost_period">按最短失联时间</string>
+    <string name="filter_by_min_lost_period_description">如果设备超出范围达到选定时间则触发。有助于避免设备一直在附近时重复检测。</string>
+    <string name="filter_apple_airdrop_contact">Apple AirDrop 联系人</string>
+    <string name="filter_apple_airdrop_contact_description">[已弃用] 当设备是 Apple 设备且 AirDrop 联系人匹配时触发</string>
+    <string name="filter_device_is_following_me">设备正在跟随我</string>
+    <string name="filter_device_is_following_me_description">如果设备在选定的时间和距离内保持在范围内并随您移动则触发</string>
+    <string name="filter_any_of">任一满足</string>
+    <string name="filter_any_of_description">一组筛选条件的 OR 运算符</string>
+    <string name="filter_all_of">全部满足</string>
+    <string name="filter_all_of_description">一组筛选条件的 AND 运算符</string>
+    <string name="filter_not">非</string>
+    <string name="filter_not_description">NOT 运算符</string>
+    <string name="filter_device_location">按设备位置</string>
+    <string name="filter_device_location_description">如果设备在选定时间段内曾在特定位置被发现则触发</string>
+    <string name="filter_user_location">按您的位置</string>
+    <string name="filter_user_location_description">如果您当前位于特定位置则触发。有助于避免在家中或办公室时触发某些筛选条件</string>
+    <string name="filter_by_tag">按标签</string>
+    <string name="filter_by_tag_description">如果设备具有选定的标签则触发</string>
+
+    <!-- Profiles list -->
+    <string name="create_new">新建</string>
+    <string name="profile_is_active">已启用</string>
+    <string name="profile_is_not_active">未启用</string>
+    <string name="radar_profile_placeholder">雷达提醒可帮助您检测特定设备。当附近设备匹配您的某条提醒规则时，应用会通知您。点击"新建"或选择模板来设置您的第一条规则。</string>
+
+    <!-- Profile details -->
+    <string name="radar_profile_title">雷达提醒</string>
+    <string name="name">名称</string>
+    <string name="description">描述（可选）</string>
+    <string name="is_active">已启用</string>
+    <string name="profile_cooldown">提醒冷却时间</string>
+    <string name="profile_cooldown_description">设置提醒规则触发后的冷却时间，以避免重复通知。</string>
+    <string name="add_filter">添加筛选条件</string>
+    <string name="filter_unknown">未知筛选条件</string>
+    <string name="min_following_duration">最短跟随时长</string>
+    <string name="min_interval_to_detect">检测最小间隔</string>
+    <string name="min_interval_to_detect_description">防止此提醒规则在选定时间段内对同一设备触发多次。有助于避免频繁通知。</string>
+    <string name="time_placeholder">时:分</string>
+    <string name="filter_unknown_title">当前筛选条件不受您的应用版本支持</string>
+    <string name="placeholder_device_name">设备名称（或正则表达式）</string>
+    <string name="ignore_case">忽略大小写</string>
+    <string name="placeholder_airdrope_contact">邮箱/电话</string>
+    <string name="airdrop_min_lost_period">最短失联时间</string>
+    <string name="airdrop_issue_description">由于 Apple 每 15 分钟更换一次 BLE 地址，AirDrop 无法与特定设备关联。要选择最短失联时间，请使用此字段。</string>
+    <string name="select_device">选择设备</string>
+    <string name="tap_to_select">点击选择</string>
+    <string name="chose_time">选择时间</string>
+    <string name="from_date">开始日期</string>
+    <string name="from_time">开始时间</string>
+    <string name="to_date">结束日期</string>
+    <string name="to_time">结束时间</string>
+    <string name="is_favorite">已收藏</string>
+    <string name="is_paired">已配对</string>
+    <string name="filter_user_location_if_no_location">位置不可用时跳过此筛选条件（否则默认值为 false）</string>
+    <string name="change">更改</string>
+    <string name="cannot_save_profile">无法保存提醒规则。请确保您的设置正确。</string>
+    <string name="profile_has_been_removed">您的提醒规则已删除。</string>
+    <string name="delete_profile_dialog_title">确定要删除提醒规则"%s"吗？</string>
+    <string name="discard_changes_dialog_title">您的更改将会丢失。继续？</string>
+    <string name="stay">留在页面</string>
+    <string name="discard_changes">放弃更改</string>
+    <string name="filter_location_has_data">已选择位置。半径：%.1f 米</string>
+    <string name="filter_location_no_data">选择目标位置</string>
+    <string name="select_tag">选择标签</string>
+    <string name="address_type_public_tag" translatable="false">STP</string>
+    <string name="address_type_random_static_tag" translatable="false">RST</string>
+    <string name="address_type_non_resolvable_tag" translatable="false">NRP</string>
+    <string name="address_type_resolvable_private_tag" translatable="false">RPA</string>
+
+    <string name="address_type_public_description">静态公共地址（可被追踪）</string>
+    <string name="address_type_random_static_description">随机静态地址（追踪受限）</string>
+    <string name="address_type_non_resolvable_description">不可解析私有地址（通常不可追踪）</string>
+    <string name="address_type_resolvable_private_description">可解析私有地址（通常不可追踪）</string>
+    <string name="address_private_disclamer">部分设备会轮换地址以保持隐私并避免被追踪。此标签并非十分准确，但可能有助于区分隐私级别。</string>
+
+    <!-- Devices List -->
+    <string name="custom_filter">自定义筛选</string>
+    <string name="create_filter">创建筛选</string>
+    <string name="filter_is_not_valid">筛选条件无效</string>
+    <string name="search_query">搜索关键词或正则表达式</string>
+    <string name="close_search">关闭搜索</string>
+    <string name="clear_search">清除搜索</string>
+    <string name="not_apple">非 Apple</string>
+    <string name="favorite">收藏</string>
+    <string name="enjoy_the_app_question">您喜欢这个应用吗？</string>
+    <string name="enjoy_the_app_yes">喜欢</string>
+    <string name="enjoy_the_app_not_really">不太喜欢</string>
+    <string name="enjoy_the_app_ask_later">稍后再问</string>
+    <string name="rate_the_app">很高兴听到这个评价，能给应用打个分吗？</string>
+    <string name="rate_the_app_github" translatable="false">GitHub</string>
+    <string name="report_the_problem">很抱歉给您带来不好的体验。您可以在 GitHub Issues 中提供反馈</string>
+    <string name="current_batch_title">您周围的设备</string>
+    <string name="current_batch_empty">尚未发现任何设备</string>
+    <string name="current_batch_empty_filtered">发现的设备中没有符合筛选条件的</string>
+
+    <!-- Device Details -->
+    <string name="device_details_title">设备详情</string>
+    <string name="is_not_favorite">未收藏</string>
+    <string name="device_details_name">名称</string>
+    <string name="device_type">设备类型</string>
+    <string name="not_applicable">不适用</string>
+    <string name="device_details_address">地址</string>
+    <string name="device_details_manufacturer">制造商</string>
+    <string name="device_details_detect_count">检测次数：</string>
+    <string name="device_details_first_detection">首次检测</string>
+    <string name="device_details_last_detection">末次检测</string>
+    <string name="device_details_dialog_time_period_selected">%s（已选择）</string>
+    <string name="change_history_period_dialog">更改位置历史时间段</string>
+    <string name="device_details_history_period">"历史时间段：%s"</string>
+    <string name="device_details_history_period_subtitle">显示大量位置历史记录可能影响地图性能</string>
+    <string name="device_details_no_location_history_for_such_period">该时间段内无位置历史记录</string>
+    <string name="device_details_day">一天</string>
+    <string name="device_details_week">一周</string>
+    <string name="device_details_month">一个月</string>
+    <string name="device_details_all_time">全部时间</string>
+    <string name="device_history_pint_style">历史样式</string>
+    <string name="device_history_pint_style_markers">标记点</string>
+    <string name="device_history_pint_style_path">路径</string>
+    <string name="device_history_pint_style_hide_markers">隐藏标记</string>
+    <string name="device_history_pint_style_heatmap">范围热力图</string>
+    <string name="time_ago">%s 前</string>
+    <string name="lifetime_data_last_update">存在时长：%1$s | 上次更新：%2$s 前</string>
+    <string name="lifetime_data">存在时长：%1$s</string>
+    <string name="device_list_placeholder">暂无数据。点击扫描按钮开始扫描</string>
+    <string name="tag_name">标签名称</string>
+    <string name="create_new_tag">新建</string>
+    <string name="add_tag">添加标签</string>
+    <string name="delete_tag_title">删除标签"%s"？</string>
+    <string name="silent_mode_is_enabled_disclaimer">离线模式下地图不可用。要查看地图，请先关闭离线模式。</string>
+    <string name="rssi_value">%s dBm</string>
+    <string name="distance_to_device">%s 米</string>
+    <string name="disclaimer">免责声明</string>
+    <string name="device_distance_disclaimer">到设备的距离基于 RSSI 值计算，并不准确</string>
+    <string name="sort_by_title">排序方式</string>
+    <string name="sort_type_standart">默认</string>
+    <string name="sort_type_by_distance">距离</string>
+    <string name="sort_type_by_device_type">设备类型</string>
+    <string name="active_mode_show_all">显示全部 %s 台在线设备</string>
+    <string name="device_is_online">在线</string>
+    <plurals name="services_discovered">
+        <item quantity="zero">未发现服务</item>
+        <item quantity="one">发现 %d 项服务</item>
+        <item quantity="other">发现 %d 项服务</item>
+    </plurals>
+    <plurals name="device_details_raw_data">
+        <item quantity="zero">无原始数据片段</item>
+        <item quantity="one">%d 个原始数据片段</item>
+        <item quantity="other">%d 个原始数据片段</item>
+    </plurals>
+    <string name="device_details_status_connecting">连接中</string>
+    <string name="device_details_status_connected">已连接</string>
+    <string name="device_details_status_disconnecting">断开中</string>
+    <string name="device_details_status_disconnected">已断开</string>
+    <string name="device_details_connect">连接</string>
+    <string name="device_details_disconnect">断开</string>
+    <string name="read">读取</string>
+    <string name="device_details_metadata">元数据</string>
+    <string name="device_map_expand_title">展开地图</string>
+    <string name="device_map_disclaimer_title">地图免责声明</string>
+    <string name="device_map_disclaimer_content">地图不显示设备的实际位置；它仅记录您的智能手机在扫描时刻的坐标。位置标记反映的是设备被检测到的地点，而非设备真实所在。地图并非用于定位设备，而是展示它们之前在何处被观测到，以及它们的移动与您自身移动的关联。</string>
+
+    <!-- Main Screen -->
+    <string name="menu_device_list">设备列表</string>
+    <string name="menu_radar_profiles">雷达提醒</string>
+    <string name="menu_journal">日志</string>
+    <string name="menu_settings">设置</string>
+    <string name="stop">停止</string>
+    <string name="scan">扫描</string>
+    <string name="refresh">刷新</string>
+
+    <!-- Notifications -->
+    <string name="unable_to_run_service_erro_toast">无法启动扫描服务。</string>
+    <string name="ble_scanner_is_started_but_no_data">BLE 扫描器已启动，但暂无数据</string>
+    <string name="known_devices_around">周围有 %s 台已知设备</string>
+    <string name="total_devices_around">周围共有 %s 台设备</string>
+    <string name="there_are_no_devices_around">周围没有已知设备</string>
+    <string name="app_service_title">@string/app_name</string>
+    <string name="app_service_title_power_saving">%s · 省电模式</string>
+    <string name="notification_profile_is_near_you">检测到匹配"%s"的设备在附近！</string>
+
+    <plurals name="notification_profiles_are_near_you">
+        <item quantity="one">%d 台设备匹配您的提醒规则，就在附近！</item>
+        <item quantity="few">%d 台设备匹配您的提醒规则，就在附近！</item>
+        <item quantity="many">%d 台设备匹配您的提醒规则，就在附近！</item>
+        <item quantity="other">%d 台设备匹配您的提醒规则，就在附近！</item>
+    </plurals>
+
+    <string name="devices_matched_postfix">"\"%s\"台设备匹配！"</string>
+    <string name="scanner_notification_channel_name">后台扫描服务通知</string>
+    <string name="device_found_notification_channel_name">雷达通知</string>
+    <string name="location_is_turned_off_title">位置已关闭</string>
+    <string name="location_is_turned_off_subtitle">由于 Android 系统限制，位置关闭时蓝牙雷达无法扫描</string>
+    <string name="errors_notifications">错误通知</string>
+    <string name="bluetooth_is_not_available_title">蓝牙不可用</string>
+    <string name="bluetooth_is_not_available_content">看起来蓝牙已关闭或您的设备不支持蓝牙。请开启蓝牙以继续</string>
+    <string name="background_location_is_restricted">未授予后台位置权限</string>
+    <string name="background_location_restricted_title">后台定位受限</string>
+    <string name="background_location_restricted_content">由于 Android 系统限制，需要始终允许位置权限才能在后台扫描 BLE。</string>
+    <string name="background_location_restricted_button">了解更多</string>
+    <string name="background_location_hide_button">隐藏</string>
+
+    <!-- Journal -->
+    <string name="journal_device_was_removed">该设备已从数据库中移除</string>
+    <string name="journal_profile_detected">提醒规则已触发："%s"</string>
+    <string name="journal_profile_removed">%s（已删除）</string>
+    <string name="unknown_capital_case">未知</string>
+    <string name="journal_placeholder">这是您的事件日志。所有触发的提醒和应用事件都会记录在这里，让您不会错过任何内容。</string>
+
+    <!-- Permissions -->
+    <string name="permission_intro_bg_location_text">申请后台位置权限有两个原因：\n- 部分功能与分析用户当前位置的数据相关。\n- 在 Android 上要在后台正常使用蓝牙，也需要位置权限。</string>
+    <string name="permissions_intro_bg_location_title">后台位置</string>
+    <string name="permissions_intro_nearby_title">附近设备（蓝牙）访问权限</string>
+    <string name="permissions_intro_nearby_description">蓝牙扫描需要附近设备（蓝牙）权限。</string>
+    <string name="permissions_intro_doze_mode_title">休眠模式（可选）</string>
+    <string name="permissions_intro_doze_mode_text">Android 会限制后台的某些进程。需要此权限以提高后台扫描器的稳定性。可选。</string>
+    <string name="permission_data_coolect_info">本应用不收集或传输任何数据。项目完全开源，可在 GitHub 上查看</string>
+    <string name="grant_permissions_manually">手动授予必要的权限</string>
+    <string name="cannot_open_the_url">无法打开该链接</string>
+
+    <!-- Shader test -->
+    <string name="shader_test_title" translatable="false">Shaders test</string>
+    <string name="shader_test_panel_size" translatable="false">Glass scale: %d\%%</string>
+    <string name="shader_test_glass_aberration" translatable="false">Aberration index: %.2f</string>
+    <string name="shader_test_glass_refraction" translatable="false">Refraction index: %.2f</string>
+    <string name="shader_test_blur_radius" translatable="false">Blur radius: %.2f</string>
+    <string name="shader_test_glass_type" translatable="false">Glass type</string>
+    <string name="shader_test_glass_type_sin" translatable="false">Curved</string>
+    <string name="shader_test_glass_type_mod" translatable="false">Fluted</string>
+    <string name="shader_test_glass_type_flat" translatable="false">Flat</string>
+    <string name="shader_test_curve_amplitude" translatable="false">Curve amplitude: %.2f</string>
+    <string name="shader_test_curve_length" translatable="false">Curve length: %.2f</string>
+    <string name="shader_test_tilt" translatable="false">x: %.2f\ny: %.2f</string>
+
+    <!-- Background location request dialog -->
+    <string name="background_location_request_title">为什么需要始终允许位置权限</string>
+    <string name="background_location_request_content">我们的应用使用低功耗蓝牙（BLE）来提供核心功能。根据 Android 政策，BLE 访问需要位置权限，因为您的位置可以从附近的 BLE 和 WiFi 信号推断出来。\n\n虽然仅在使用应用时允许位置访问也能正常工作，但授予始终允许位置访问可确保即使应用在后台运行时 BLE 扫描也不中断。否则，Android 系统可能会限制或阻止 BLE 访问，从而影响应用功能。\n\n我们尊重您的隐私，仅将位置权限用于 BLE 扫描，以使应用无缝运行。应用不会通过互联网传输您的数据，所有信息都安全地存储在您的设备本地。</string>
+    <string name="background_location_request_button">授予权限</string>
+    <string name="osm_copyright" translatable="false">© OpenStreetMap</string>
+
+    <string name="bluetooth_status_paired">已配对</string>
+    <string name="bluetooth_status_paired_description">设备已配对</string>
+
+    <string name="unlowful_usage_disclaimer">本项目仅用于教育、安全研究和个人调查目的。作者不认可或鼓励将本软件用于任何非法或不道德的活动。您需自行负责确保使用本工具时遵守所有适用的法律法规。</string>
+
+    <string name="what_is_this_app_for_title">这个应用是做什么的</string>
+    <string name="what_is_this_app_for_long">低功耗蓝牙（BLE）是一种广泛使用的无线协议，为您周围的各种设备提供支持——从耳机、智能手表、健身追踪器到 AirTag、物联网设备、游戏控制器，甚至现代情趣用品。BLE 设备通过广播小型数据包进行通信，其中可能包含设备标识符、元数据和其他连接所需的信息。\n\n这些广播虽然对设备功能至关重要，但也可能被用来追踪您的存在和行动。例如，一副廉价的无线耳机可能会公开暴露一个持久标识符。任何在附近监听 BLE 数据包的人——无论是政府、公司还是恶意行为者——都可能在未经您同意的情况下利用这些信息追踪您。\n\n幸运的是，许多现代设备在 BLE 中实现了隐私功能以防止追踪，例如随机化地址和有限广播。BLE Radar 帮助您区分保护您隐私的设备和可能被追踪的设备。通过分析您周围的 BLE 流量，应用让您了解哪些设备可以安全使用。\n\n除了分析之外，BLE Radar 还可以实时保护您。当可疑设备在附近或某台设备随您移动一段时间时，应用可以提醒您，让您对潜在的跟踪或不必要的追踪获得早期预警。您可以根据设备标识符、类型或行为配置提醒，以满足您的安全需求。\n\n开发这个应用的目标是让您能够了解和控制环境中的 BLE 设备。了解哪些设备正在广播可追踪信息、哪些注重隐私，能让您对日常使用、佩戴和交互的设备做出明智的决定。</string>
+</resources>
